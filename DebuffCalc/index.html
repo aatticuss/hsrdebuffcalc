@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debuff Calculator</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="button-forms">
+    <button class="swap-button" id="btn-form-realchance">Chance Real</button>
+    <button class="swap-button" id="btn-form-ehr">Taxa de Acerto</button>
+  </div>
+    <form id="form-real-chance-calc">
+      <div class="inputs">
+        <div class="user-input-wrapper" id="base-chance-f1">
+          <label for="base-chance">Chance Base do Debuff:</label>
+          <input type="range" class="user-input-field" id="input-base-chance-f1" min="0" max="150" value="100" data-initial="100">
+          <span class="display-value" id="basechance-value-f1">100%</span>
+        </div>
+        <div class="user-input-wrapper" id="ehr">
+          <label for="ehr">Taxa de Acerto de Efeito:</label>
+          <input type="range" class="user-input-field" id="input-ehr" min="0" max="200" value="67" data-initial="67">
+          <span class="display-value" id="ehr-value-f1">67%</span>
+        </div>
+        <div class="user-input-wrapper" id="effres-f1">
+          <label for="effres">RES a Efeito do inimigo:</label>
+          <input type="range" class="user-input-field" id="input-effres-f1" min="0" max="100" value="40" data-initial="40">
+          <span class="display-value" id="effres-value-f1">40%</span>
+        </div>
+        <div class="user-input-wrapper" id="debuffres-f1">
+          <label for="debuffres">RES a Debuff do inimigo:</label>
+          <input type="range" class="user-input-field" id="input-debuffres-f1" min="0" max="100" value="0" data-initial="0">
+          <span class="display-value" id="debuffres-value-f1">0%</span>
+        </div>
+        <div class="btn-cmds">
+          <input type="reset" class="reset-btn" id="btn-reset-f1" value="Reset" />
+          <button class="calc-btn" id="calculate-realchance-btn" type="button">Calcular</button>
+        </div>
+        <div class="calculation-result" id="real-chance">
+          <label for="real-chance">Chance Real do Debuff:</label>
+          <span id="result-calc-realchance">0%</span>
+        </div>
+      </div>
+    </form>
+    <form id="form-ehr-calc">
+      <div class="inputs">
+        <div class="user-input-wrapper" id="base-chance-f2">
+          <label for="base-chance">Chance Base do Debuff:</label>
+          <input type="range" class="user-input-field" id="input-base-chance-f2" min="0" max="150" value="100" data-initial="100">
+          <span class="display-value" id="basechance-value-f2">100%</span>
+        </div>
+        <div class="user-input-wrapper" id="desired-chance">
+          <label for="desired-chance">Chance Desejada do Debuff:</label>
+          <input type="range" class="user-input-field" id="input-desired-chance" min="0" max="100" value="100" data-initial="100">
+          <span class="display-value" id="desiredchance-value-f2">100%</span>
+        </div>
+        <div class="user-input-wrapper" id="effres-f2">
+          <label for="effres-f2">RES a Efeito do inimigo:</label>
+          <input type="range" class="user-input-field" id="input-effres-f2" min="0" max="100" value="40" data-initial="40">
+          <span class="display-value" id="effres-value-f2">40%</span>
+        </div>
+        <div class="user-input-wrapper" id="debuffres-f2">
+          <label for="debuffres">RES a Debuff do inimigo:</label>
+          <input type="range" class="user-input-field" id="input-debuffres-f2" min="0" max="100" value="0" data-initial="0">
+          <span class="display-value" id="debuffres-value-f2">0%</span>
+        </div>
+        <div class="buttons">
+          <input type="reset" class="reset-btn" id="btn-reset-f2" value="Reset" />
+          <button class="calc-btn" id="calculate-ehr-btn" type="button">Calcular</button>
+        </div>
+        <div class="calculation-result" id="ehr-needed">
+          <label for="ehr-needed">Taxa de Acerto de Efeito necessária:</label>
+          <span id="result-calc-ehr">0</span>
+        </div>
+      </div>
+    </form> 
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
